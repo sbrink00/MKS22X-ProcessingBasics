@@ -29,14 +29,10 @@ class Visualizer {
     rect(x, y, 400, 200);
     //This is a 200x400 box.
     //The width of the visualizer is 400! This rect is the border
-
     //the line is the 0 y-value, the top is 100, the bottom is -100
     line(x, y+100, x+400, y+100);
-    v = new Visualizer(0, 0);
-    int xcor = 0;
     for (int idx = 0; idx < values.length; idx ++){
-      rect(xcor, values[idx], 10, values[idx]);
-      xcor+= 10;
+      rect(idx * 10 + x, values[idx], 10, values[idx]);
     }
     //You need to use a loop. You need to make the HEIGHT of the bars 
     //the values in the array.
@@ -45,10 +41,10 @@ class Visualizer {
 
     //???WRITE THIS METHOD!!!
     //THESE ARE WRONG: They just illustrate how they could look
-    fill(255, 0, 0);
-    rect(x+40, y+100, 60, 50);
-    fill(0, 255, 0);
-    rect(x+120, y+50, 60, 50);
+    //fill(255, 0, 0);
+    //rect(x+40, y+100, 60, 50);
+    //fill(0, 255, 0);
+    //rect(x+120, y+50, 60, 50);
 
 
     //Width of the visualizer is 400!
