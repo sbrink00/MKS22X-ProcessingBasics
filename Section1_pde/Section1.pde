@@ -32,7 +32,9 @@ class Visualizer {
     //the line is the 0 y-value, the top is 100, the bottom is -100
     line(x, y+100, x+400, y+100);
     for (int idx = 0; idx < values.length; idx ++){
-      rect(idx * 10 + x, values[idx], 10, values[idx]);
+       if (values[idx] > 0) fill(0, 255, 0);
+       else fill(255, 0, 0); 
+      rect(x + 10 * idx, y + 100, 10, values[idx]);
     }
     //You need to use a loop. You need to make the HEIGHT of the bars 
     //the values in the array.
