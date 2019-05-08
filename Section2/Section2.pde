@@ -33,8 +33,12 @@ void draw() {
   background(50);  
   
   fill(255);
-  text("Click the mouse to increase levels, press a key to decrease levles",20,20);
+  text("Click the mouse to increase levels, press a key to decrease levels",20,20);
   text("levels: " + levels, 20, 35);
+  if (levels == 10) {
+    text("Going past ten levels is not recommended", 20, 50);
+    text("to avoid slowing down the program", 20, 65);
+  }
   gasket(levels,0, height-10, width, height-10, width/2, 10);
 
  //koch(levels,width-10, height/2,10, height/3 ); 
@@ -42,7 +46,7 @@ void draw() {
 }
 
 void mouseClicked(){ 
- levels ++;  
+ if (levels < 10) levels ++;  
 }
 
 void keyPressed(){
